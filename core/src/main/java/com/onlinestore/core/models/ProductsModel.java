@@ -136,7 +136,7 @@ Resource resource;
         return similarBrandExpDate;
     }
 
-    public int getSimilarBrandPrice() {
+      public int getSimilarBrandPrice() {
         logs.info("from Similar Brand Price");
         return similarBrandPrice;
     }
