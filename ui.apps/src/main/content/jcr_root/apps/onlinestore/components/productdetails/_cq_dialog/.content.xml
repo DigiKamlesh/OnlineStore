@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+  xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+  xmlns:cq="http://www.day.com/jcr/cq/1.0"
+  xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured" jcr:title="Products" sling:resourceType="cq/gui/components/authoring/dialog">
+  <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/tabs" maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <products jcr:primaryType="nt:unstructured" jcr:title="Products" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <well jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/well" fieldLabel="Product Details">
+                <items jcr:primaryType="nt:unstructured">
+                  <productdetails jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldDescription="Products Details" fieldLabel="Product Details" required="{Boolean}false">
+                    <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" emptyText="Products Details" name="./productDetails">
+                      <items jcr:primaryType="nt:unstructured">
+                        <productname jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" emptyText="Product Name" fieldLabel="Product Name" name="./productName"/>
+                        <brand jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" emptyText="Brand Name" fieldLabel="Brand Name" name="./brandName"/>
+
+                        <quantity jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" fieldDescription="How much quantity you want." fieldLabel="Quantity" name="./quantity" step="1" value="1"/>
+
+                        <mfgdate jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" emptyText="Manufacturing Date" fieldLabel="Manufacturing Date" name="./mfgDate"/>
+                        <expdate jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" emptyText="Expiry Date" fieldLabel="Expiry Date" name="./expDate"/>
+                        <price jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" fieldDescription="Price" fieldLabel="Price" name="./price" step="1" value="0"/>
+
+
+
+                      </items>
+                    </field>
+                  </productdetails>
+                </items>
+              </well>
+            </items>
+          </products>
+          <similarbrands jcr:primaryType="nt:unstructured" jcr:title="Similar Brands" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <well jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/well" fieldLabel="Similar Brands">
+                <items jcr:primaryType="nt:unstructured">
+                  <brands jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldDescription="Similar Brands" fieldLabel="Similar Brands" required="{Boolean}false">
+                    <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" emptyText="Similar Brands" name="./similarBrands">
+                      <items jcr:primaryType="nt:unstructured">
+                        <brandname jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" emptyText="Brand Name" fieldLabel="Brand Name" name="./similarBrandBrandName"/>
+                        <mfgdate jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" emptyText="Manufacturing Date" fieldLabel="Manufacturing Date" name="./similarBrandMfgDate"/>
+                        <expdate jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/datepicker" emptyText="Expiry Date" fieldLabel="Expiry Date" name="./similarBrandExpDate"/>
+                        <price jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" fieldDescription="Price" fieldLabel="Price" name="./similarBrandPrice" step="1" value="0"/>
+
+                      </items>
+                    </field>
+                  </brands>
+                </items>
+              </well>
+            </items>
+          </similarbrands>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>

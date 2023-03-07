@@ -1,0 +1,18 @@
+<sly data-sly-use.products="com.onlinestore.core.models.ProductsModel" />
+<div data-sly-list.item="${products.productDetails}">
+  ---------------Products : ${itemList.count}-------------- <br />
+  Product : ${item.productName} <br />
+  Brand Name : ${item.brandName} <br />
+  Quantity: ${item.quantity} <br />
+  Mfg Date : ${'MMM dd,yyyy' @ format=item.mfgDate} <br />
+  Exp Date : ${'MMM dd,yyyy' @ format=item.expDate} <br />
+  Price: ${item.price} <br />
+</div>
+
+<div data-sly-list.item="${products.similarBrands}">
+  ---------------Similar Brands : ${itemList.count}-------------- <br />
+  Brand Name : ${item.similarBrandBrandName} <br />
+  Mfg Date : ${'MMM dd,yyyy' @ format=item.similarBrandMfgDate} <br />
+  Exp Date : ${'MMM dd,yyyy' @ format=item.similarBrandExpDate} <br />
+  Price: ${item.similarBrandPrice} <br />
+</div>
